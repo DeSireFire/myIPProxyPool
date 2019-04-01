@@ -213,11 +213,10 @@ def getMyIP():
 
 
 if __name__ == '__main__':
-    pass
-    # ip = '222.186.161.132'
-    # port = 3128
-    # proxies = {"http": "http://%s:%s" % (ip, port), "https": "http://%s:%s" % (ip, port)}
-    # _checkHttpProxy(None,proxies)
+    ip = '222.186.161.132'
+    port = 3128
+    proxies = {"http": "http://%s:%s" % (ip, port), "https": "http://%s:%s" % (ip, port)}
+    _checkHttpProxy(None,proxies)
     # getMyIP()
     # str="{ip:'61.150.43.121',address:'陕西省西安市 西安电子科技大学'}"
     # j = json.dumps(str)

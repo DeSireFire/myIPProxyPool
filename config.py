@@ -94,15 +94,7 @@ parserList = [
         'moduleName': 'CnproxyPraser',
         'pattern': r'<tr><td>(\d+\.\d+\.\d+\.\d+)<SCRIPT type=text/javascript>document.write\(\"\:\"(.+)\)</SCRIPT></td><td>(HTTP|SOCKS4)\s*',
         'position': {'ip': 0, 'port': 1, 'type': -1, 'protocol': 2}
-    },
-    # {
-    #     'urls': ['http://www.cnproxy.com/proxy%s.html' % i for i in range(1, 11)],
-    #     'type': 'module',
-    #     'moduleName': 'CnproxyPraser',
-    #     'pattern': r'<tr><td>(\d+\.\d+\.\d+\.\d+)<SCRIPT type=text/javascript>document.write\(\"\:\"(.+)\)</SCRIPT></td><td>(HTTP|SOCKS4)\s*',
-    #     'position': {'ip': 0, 'port': 1, 'type': -1, 'protocol': 2}
-    # }
-
+    }
 ]
 '''
 数据库的配置
@@ -110,15 +102,12 @@ parserList = [
 DB_CONFIG = {
 
     # 'DB_CONNECT_TYPE': 'sqlalchemy',  # 'pymongo'sqlalchemy;redis
-
     # 'DB_CONNECT_STRING':'mongodb://localhost:27017/'
-
     # 'DB_CONNECT_STRING': 'sqlite:///' + os.path.dirname(__file__) + '/data/proxy.db'
-
     # DB_CONNECT_STRING : 'mysql+mysqldb://root:root@localhost/proxy?charset=utf8'
 
     'DB_CONNECT_TYPE': 'redis',  # 'pymongo'sqlalchemy;redis
-    'DB_CONNECT_STRING': 'redis://localhost:6379/8',
+    'DB_CONNECT_STRING': 'redis://:DeSireFire233666888@localhost:6379/8',
 
 }
 CHINA_AREA = ['河北', '山东', '辽宁', '黑龙江', '吉林'
@@ -207,8 +196,7 @@ TEST_HTTPS_HEADER = 'https://httpbin.org/get'
 #因此在这个地方用户可以自己添加检测函数,我以百度为访问网址尝试一下
 #大家可以看一下Validator.py文件中的baidu_check函数和detect_proxy函数就会明白
 
-# CHECK_PROXY={'function':'checkProxy'}#{'function':'baidu_check'}
-CHECK_PROXY={'function':'baidu_check'}
+CHECK_PROXY={'function':'checkProxy'}#{'function':'baidu_check'}
 
 #下面配置squid,现在还没实现
 #SQUID={'path':None,'confpath':'C:/squid/etc/squid.conf'}
